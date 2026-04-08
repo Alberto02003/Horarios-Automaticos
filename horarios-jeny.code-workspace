@@ -1,0 +1,84 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "horarios-jeny (root)"
+    },
+    {
+      "path": "frontend",
+      "name": "Frontend (React + Vite)"
+    },
+    {
+      "path": "backend",
+      "name": "Backend (Python + FastAPI)"
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+      100
+    ],
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true
+  },
+  "settings.frontend": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "typescript.tsdk": "frontend/node_modules/typescript/lib",
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+  },
+  "settings.backend": {
+    "python.defaultInterpreterPath": "./backend/.venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "[python]": {
+      "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "editor.formatOnSave": true
+  },
+  "extensions": {
+    "recommendations": [
+      "editorconfig.editorconfig",
+      "streetsidesoftware.code-spell-checker",
+      "eamodio.gitlens",
+      "github.copilot",
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "dsznajder.es7-react-js-snippets",
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "charliermarsh.ruff",
+      "ms-azuretools.vscode-docker"
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "FastAPI: Debug",
+        "type": "python",
+        "request": "launch",
+        "module": "uvicorn",
+        "args": [
+          "src.main:app",
+          "--reload",
+          "--port",
+          "8080"
+        ],
+        "cwd": "${workspaceFolder}/backend",
+        "envFile": "${workspaceFolder}/.env",
+        "justMyCode": true
+      }
+    ]
+  }
+}
