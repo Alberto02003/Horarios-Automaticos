@@ -1,7 +1,3 @@
-# Subrepos (deployed independently)
-frontend/
-backend/
-
 # Dependencies
 node_modules/
 
