@@ -30,9 +30,5 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 
-# Source data files with PII (imported via backend scripts)
-ejemplos/
-*.xlsx
-
 # Orphan npm lockfiles at repo root (frontend has its own in frontend/)
 /package-lock.json
